@@ -42,12 +42,18 @@ input{
   width: 30%;
   margin-left: 42rem;
   margin-top: 20px;
+  border-radius: 10px;
 }
 
 .Match{
   background-color: #297373;
   margin: 10px;
   padding-bottom: 20px;
+  border-radius: 8px;
+}
+
+.Match h2{
+  margin-left: 10px;
 }
 
 .Teams{
@@ -69,12 +75,17 @@ input{
 
 .Table{
   margin: 40px 10px 10px 10px;
+  border-radius: 8px;
   background-color: #297373;
 }
 
 .Table h2{
   text-align: center;
   padding: 10px 0 20px 0 ;
+}
+
+.Table ol{
+  padding: 10px;
 }
 
 .Table ol li{
@@ -87,7 +98,12 @@ input{
 
 .Jogadores{
   margin: 40px 10px 10px 10px;
+  border-radius: 8px;
   background-color: #297373;
+}
+
+.Jogadores h2{
+  margin-left: 10px;
 }
 
 .Jogadores ul{
