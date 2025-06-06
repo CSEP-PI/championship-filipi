@@ -11,9 +11,9 @@ CORS_ALLOW_ALL_ORIGINS: True
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'campDB',
+        'NAME': 'campdb',
         'USER': 'root',
-        'PASSWORD': 'password',
+        'PASSWORD': 'toor',
         'PORT': 3306,
     }
 }

@@ -1,0 +1,31 @@
+.TeamsListContainer{
+    background-color: #E3DBDB;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.BackBtn {
+    color: white;
+    text-decoration: none;
+}
+
+
+
+.MainTeamsList h1{
+    margin-bottom: 60px;
+}
+
+.MainTeamsList ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.MainTeamsList ul li{
+    box-sizing: border-box;
+    display: inline-block;
+    width: 30rem;
+}

@@ -2,6 +2,7 @@
 import gigante from "./assets/gigante.png";
 import { IoClose } from "react-icons/io5";
 import "./App.css";
+import {Link} from 'react-router-dom'
 
 function App() {
   return (
@@ -9,13 +10,13 @@ function App() {
       <div className="Header">
         <ul className='Header-list'>
           <li>
-            <a href="#">Campeonato</a>
+            <Link to="">Campeonato</Link>
           </li>
           <li>
-            <a href="#">Times</a>
+            <Link to="/TimesLista">Times</Link>
           </li>
           <li>
-            <a href="#">Jogadores</a>
+            <Link to="">Jogadores</Link>
           </li>
         </ul>
         <input type="text" placeholder="Pesquisar por partidas" />
