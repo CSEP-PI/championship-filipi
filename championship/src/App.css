@@ -96,22 +96,27 @@ input{
   border: 1px solid black;
 }
 
-.Jogadores{
+.SeeMore{
+  text-decoration: none;
+  color: black;
+}
+
+.JogadoresContainer{
   margin: 40px 10px 10px 10px;
   border-radius: 8px;
   background-color: #297373;
 }
 
-.Jogadores h2{
+.JogadoresContainer h2{
   margin-left: 10px;
 }
 
-.Jogadores ul{
+.JogadoresContainer ul{
   display: flex;
   justify-content: space-between;
 }
 
-.Jogadores ul li{
+.JogadoresContainer ul li{
   box-sizing: border-box;
   display: inline-block;
   width: 13rem;

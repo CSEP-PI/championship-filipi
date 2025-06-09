@@ -4,6 +4,7 @@ import './index.css';
 import App from './App';
 import TimesLista from './pages/TimesLista/index'
 import TimeDetail from './pages/TimeDetail/index'
+import Tabela from './pages/Tabela/index'
 import reportWebVitals from './reportWebVitals';
 import {
   createBrowserRouter,
@@ -22,6 +23,10 @@ const router = createBrowserRouter([
   {
     path: '/TimeDetail',
     element: <TimeDetail />,
+  },
+  {
+    path: '/Tabela',
+    element: <Tabela />,
   },
 ]);
 

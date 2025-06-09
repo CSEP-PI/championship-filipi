@@ -1,4 +1,21 @@
 .TimeDetailContainer{
+    display: flex;
     background-color: #E3DBDB;
     height: 100vh;
+    justify-content: center;
 }
+
+.TimeInfos{
+    display: flex;
+    padding-top: 9rem;
+}
+
+.TimeContent{
+    padding-top: 7rem;
+}
+
+.TimeInfos img{
+    width: 200px;
+    height: 200px;
+}
+

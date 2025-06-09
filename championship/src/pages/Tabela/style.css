@@ -1,0 +1,41 @@
+.TableContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #E3DBDB;
+    width: 100vw;
+    height: 100vh;
+}
+
+.TableContent {
+    text-align: center;
+}
+
+.TableTitle {
+    margin-bottom: 20px;
+}
+
+.TablePart {
+    display: flex;
+    gap: 40px;
+}
+
+.Column {
+    padding: 10px 20px;
+}
+
+.Column li{
+    font-size: 20px;
+    background-color: #6D6466;
+    padding: 20px;
+    border: 1px solid #000;
+}
+
+.TableArrow{
+    color: #6D6466;
+}
+
+.TableBack{
+    text-decoration: none;
+    color: #6D6466;
+}

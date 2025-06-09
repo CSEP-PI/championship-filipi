@@ -1,10 +1,24 @@
-// import { useState } from "react";
+import { useState, useEffect } from "react";
 import gigante from "./assets/gigante.png";
 import { IoClose } from "react-icons/io5";
 import "./App.css";
 import {Link} from 'react-router-dom'
+import api from './services/api'
 
 function App() {
+  const [partida, setPartida] = useState();
+
+  useEffect(() => {
+    api
+      .get('api/partidas/')
+      .then((response) => setPartida(response.data))
+      .catch((err) => {
+        console.error('erro:' + err);
+      })
+    }, []);
+    
+  console.log(partida)
+
   return (
     <div className='Home'>
       <div className="Header">
@@ -26,7 +40,7 @@ function App() {
         <div className='Teams'>
           <img src={gigante} alt="timeA" className='Time' />
           <div className='Placar'>
-            <p className='Gols'>10</p>
+            <p className='Gols'>{partida}</p>
             <IoClose />
             <p className='Gols'>20</p>
           </div>
@@ -34,6 +48,7 @@ function App() {
         </div>
       </div>
       <div className='Table'>
+        <p> <Link to="/Tabela" className='SeeMore'>Ver mais</Link></p>
         <h2>Tabela</h2>
         <ol>
           <li>time</li>
@@ -46,7 +61,7 @@ function App() {
           <li>time</li>
         </ol>
       </div>
-      <div className='Jogadores'>
+      <div className='JogadoresContainer'>
         <h2>Jogadores</h2>
         <ul>
           <li>Jogador</li>
