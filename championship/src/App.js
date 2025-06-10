@@ -7,6 +7,7 @@ import api from './services/api'
 
 function App() {
   const [partida, setPartida] = useState();
+  const [tabela, setTabela] = useState();
 
   useEffect(() => {
     api
@@ -15,9 +16,21 @@ function App() {
       .catch((err) => {
         console.error('erro:' + err);
       })
+
+    api
+      .get('api/tabela/')
+      .then((response) => setTabela(
+        // Object.entries(response.data).forEach(([chave, valor]) => {
+        //     console.log(chave, valor)
+        //   })
+       response.data
+      ))
+      .catch((err) => {
+        console.error('erro' + err);
+      })
     }, []);
-    
-  console.log(partida)
+
+    console.log(typeof(tabela))
 
   return (
     <div className='Home'>
@@ -40,9 +53,9 @@ function App() {
         <div className='Teams'>
           <img src={gigante} alt="timeA" className='Time' />
           <div className='Placar'>
-            <p className='Gols'>{partida}</p>
+            <p className='Gols'>{partida?.[0].placar_mandante}</p>
             <IoClose />
-            <p className='Gols'>20</p>
+            <p className='Gols'>{partida?.[0].placar_visitante}</p>
           </div>
           <img src={gigante} alt="TimeB" className='Time' />
         </div>
@@ -50,16 +63,13 @@ function App() {
       <div className='Table'>
         <p> <Link to="/Tabela" className='SeeMore'>Ver mais</Link></p>
         <h2>Tabela</h2>
-        <ol>
-          <li>time</li>
-          <li>time</li>
-          <li>time</li>
-          <li>time</li>
-          <li>time</li>
-          <li>time</li>
-          <li>time</li>
-          <li>time</li>
-        </ol>
+
+
+        {/* <ol>
+          {tabela.map((time) => 
+            <li>{time}</li>)}
+
+        </ol> */}
       </div>
       <div className='JogadoresContainer'>
         <h2>Jogadores</h2>

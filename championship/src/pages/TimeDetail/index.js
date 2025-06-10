@@ -11,17 +11,6 @@ function TimeDetail() {
                 <h2>Capitão</h2>
                 </div>
             </div>
-
-            <div>
-                <div className="Campeonatos">
-                    <div className="team-name">Capsibo</div>
-                    <div className="Edicoes">
-                        <div className="edicao">e2025</div>
-                        <div className="edicao">e2024</div>
-                        <div className="edicao">e2023</div>
-                    </div>
-                </div>
-
                 <div className="Escalacao">
                     <div className="Jogadores">
                         <div className="Jogador">Jogador</div>
@@ -41,7 +30,6 @@ function TimeDetail() {
                         <div className="Jogador">Jogadar</div>
                     </div>
                 </div>
-            </div>
         </div>
     )
 }
