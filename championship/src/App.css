@@ -47,58 +47,78 @@ input{
 
 .Match{
   background-color: #297373;
-  margin: 10px;
+  margin: 10px auto;
   padding-bottom: 20px;
   border-radius: 8px;
+  width: 90%;
+  max-width: 1200px;
 }
 
 .Match h2{
-  margin-left: 10px;
+  text-align: center;
+  padding: 20px 0;
+  color: #000;
 }
 
 .Teams{
   display: flex;
-  margin-left: 40rem;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
 }
 
 .Placar{
   display: flex;
+  align-items: center;
   gap: 30px;
-  margin-top: 5rem;
-  padding: 0 10px 0 10px;
-  color: white;
+  color: #000;
 }
 
 .Placar .Gols{
   font-size: 45px;
+  font-weight: bold;
 }
 
 .Table{
   margin: 40px 10px 10px 10px;
   border-radius: 8px;
   background-color: #297373;
+  padding: 20px;
 }
 
 .Table h2{
   text-align: center;
-  padding: 10px 0 20px 0 ;
+  padding: 10px 0 20px 0;
+  color: #fff;
 }
 
-.Table ol{
-  padding: 10px;
+.Table table {
+  width: 100%;
+  background-color: #6D6466;
+  border-radius: 8px;
 }
 
-.Table ol li{
-  box-sizing: border-box;
-  display: inline-block;
-  width: 50%;
-  height: 50px;
-  border: 1px solid black;
+.Table th {
+  background-color: #1a4d4d;
+  color: #fff;
+  padding: 12px;
+  text-align: center;
+  font-weight: bold;
 }
 
-.SeeMore{
+.Table td {
+  padding: 12px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+
+.SeeMore {
   text-decoration: none;
-  color: black;
+  color: #fff;
+  float: right;
+  margin-right: 20px;
+  font-weight: bold;
 }
 
 .JogadoresContainer{

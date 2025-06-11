@@ -19,18 +19,16 @@ function App() {
 
     api
       .get('api/tabela/')
-      .then((response) => setTabela(
-        // Object.entries(response.data).forEach(([chave, valor]) => {
-        //     console.log(chave, valor)
-        //   })
-       response.data
-      ))
+      .then((response) => {
+        console.log('Dados da tabela:', response.data);
+        setTabela(response.data);
+      })
       .catch((err) => {
         console.error('erro' + err);
       })
     }, []);
 
-    console.log(typeof(tabela))
+    console.log('Estado da tabela:', tabela);
 
   return (
     <div className='Home'>
@@ -63,13 +61,36 @@ function App() {
       <div className='Table'>
         <p> <Link to="/Tabela" className='SeeMore'>Ver mais</Link></p>
         <h2>Tabela</h2>
-
-
-        {/* <ol>
-          {tabela.map((time) => 
-            <li>{time}</li>)}
-
-        </ol> */}
+        <table>
+          <thead>
+            <tr>
+              <th>Time</th>
+              <th>P</th>
+              <th>J</th>
+              <th>V</th>
+              <th>E</th>
+              <th>D</th>
+              <th>GP</th>
+              <th>GC</th>
+              <th>SG</th>
+            </tr>
+          </thead>
+          <tbody>
+            {tabela && Object.entries(tabela.tabela).map(([key, time]) => (
+              <tr key={key}>
+                <td>{time.time}</td>
+                <td>{time.pontos}</td>
+                <td>{time.qtd_jogos}</td>
+                <td>{time.vitorias}</td>
+                <td>{time.empates}</td>
+                <td>{time.derrotas}</td>
+                <td>{time.gols}</td>
+                <td>{time.gols_s}</td>
+                <td>{time.saldo}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
       </div>
       <div className='JogadoresContainer'>
         <h2>Jogadores</h2>
